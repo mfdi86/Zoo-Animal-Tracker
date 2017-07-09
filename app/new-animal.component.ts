@@ -6,39 +6,39 @@ import { Animal } from './animal.model';
   template: `
   <h1>New Animal</h1>
   <div>
-    <label>Enter Name:</label>
+    <label>Name:</label>
     <input #newName>
   </div>
   <div>
-    <label>Enter Species:</label>
+    <label>Species:</label>
     <input #newSpecies>
   </div>
   <div>
-    <label>Enter Age:</label>
+    <label>Age:</label>
     <input #newAge>
   </div>
   <div>
-    <label>Enter Diet:</label>
+    <label>Diet:</label>
     <input #newDiet>
   </div>
   <div>
-    <label>Enter Location:</label>
+    <label>Location:</label>
     <input #newLocation>
   </div>
   <div>
-    <label>Enter Quantity of Caretakers:</label>
+    <label>Number of Caretakers:</label>
     <input #newCaretakers>
   </div>
   <div>
-    <label>Enter Sex:</label>
+    <label>Sex:</label>
     <input #newSex>
   </div>
   <div>
-    <label>Enter Likes:</label>
+    <label>Likes:</label>
     <input #newLikes>
   </div>
   <div>
-    <label>Enter Dislikes:</label>
+    <label>Dislikes:</label>
     <input #newDislikes>
   </div>
   <div>

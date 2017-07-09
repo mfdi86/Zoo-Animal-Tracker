@@ -28,11 +28,12 @@ import { Animal } from './animal.model';
 
 // Class Declaration (determines the component's BEHAVIOR)
 export class AppComponent {
-  appDescription: string = 'An application to store zoo animal profiles';
+  appDescription: string = 'AN APPLICATION TO STORE ZOO ANIMAL PROFILES!';
   masterAnimalList: Animal[] = [
-    new Animal('Elephant', 'Thomas', 3, 'Leaves', 'Forest Two', 2, 'Male', 'Bath time', 'Loud noises'),
-    new Animal('Gorilla', 'Susan', 2, 'Leaves', 'Forest One', 1, 'Female', 'Music', 'Sad faces'),
-    new Animal('Tiger', 'Joe', 4, 'Mice', 'JungleOne', 1, 'Male', 'Running around', 'Loud noises')
+    new Animal('Elephant', 'Thomas', 1, 'Leaves', 'Forest Two', 3, 'Male', 'Bath time', 'Loud noises'),
+    new Animal('Gorilla', 'Susan', 2, 'Leaves', 'Forest One', 2, 'Female', 'Music', 'Sad faces'),
+    new Animal('Lion', 'Jolene', 4, 'Mice', 'JungleTwo', 1, 'Female', 'Running around', 'Pineapple'),
+    new Animal('Red Panda', 'Joe', 7, 'Mice', 'JungleOne', 1, 'Male', 'Running around', 'Loud noises')
   ];
 
   selectedAnimal = null;

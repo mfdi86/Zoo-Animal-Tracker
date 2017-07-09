@@ -10,19 +10,23 @@ import { Animal } from './animal.model';
     <option value="youngAnimals">Young Animals</option>
     <option value="olderAnimals">Older Animals</option>
   </select>
-  <ul>
-    <li *ngFor='let currentAnimal of childAnimalList | ageFilter:filterByAge'>
-      <h2>{{currentAnimal.name}}</h2>
-      <b>Species: </b>{{currentAnimal.species}}<br>
-      <b>Age: </b>{{currentAnimal.age}}<br>
-      <b>Diet: </b>{{currentAnimal.diet}}<br>
-      <b>Location: </b>{{currentAnimal.location}}<br>
-      <b>No. of Caretakers: </b>{{currentAnimal.caretakers}}<br>
-      <b>Likes: </b>{{currentAnimal.likes}}<br>
-      <b>Dislikes: </b>{{currentAnimal.dislikes}}<br>
-      <button (click)="editButtonHasBeenClicked(currentAnimal)">Edit!!!</button>
-    </li>
-  </ul>
+  <div class="animal-wrapper">
+    <ul>
+      <li *ngFor='let currentAnimal of childAnimalList | ageFilter:filterByAge'>
+        <div class="animal">
+          <h2>{{currentAnimal.name}}</h2>
+          <b>Species: </b>{{currentAnimal.species}}<br>
+          <b>Age: </b>{{currentAnimal.age}}<br>
+          <b>Diet: </b>{{currentAnimal.diet}}<br>
+          <b>Location: </b>{{currentAnimal.location}}<br>
+          <b>No. of Caretakers: </b>{{currentAnimal.caretakers}}<br>
+          <b>Likes: </b>{{currentAnimal.likes}}<br>
+          <b>Dislikes: </b>{{currentAnimal.dislikes}}<br>
+          <button (click)="editButtonHasBeenClicked(currentAnimal)">Edit!!!</button>
+        </div>
+      </li>
+    </ul>
+  </div>
   `
 })
 

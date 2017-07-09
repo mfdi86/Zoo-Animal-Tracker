@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Schoolbell', cursive;
-  color: #343434;
+  color: #ba85d1;
   background-color: #c9fdf6;
   box-sizing: border-box;
   hr {
@@ -10,7 +10,6 @@ body {
   }
 }
 
-// HERO AND HEADER //
 .hero {
   background-image: url('/resources/images/hero.jpg');
   background-size: cover;
@@ -33,4 +32,18 @@ body {
       margin: 0;
       font-size: 3.5em;
     }
+}
+
+.animal-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.animal  {
+  text-align: center;
+  padding: 15px;
+  width: 30vw;
+  height: 250px;
 }
