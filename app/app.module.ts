@@ -6,11 +6,16 @@ import { FormsModule } from '@angular/forms';
 import { AnimalListComponent }  from './animal-list.component';
 import { EditAnimalComponent } from './edit-animal.component';
 import { NewAnimalComponent } from './new-animal.component';
+import { AgeFilterPipe } from './age-filter.pipe';
 
 
 @NgModule({
   imports: [ BrowserModule, FormsModule ], //other modules used in THIS module
-  declarations: [ AppComponent, AnimalListComponent, EditAnimalComponent, NewAnimalComponent], //all components residing in THIS module
+  declarations: [ AppComponent,
+                    AnimalListComponent,
+                      EditAnimalComponent,
+                        NewAnimalComponent,
+                          AgeFilterPipe], //all components residing in THIS module
   bootstrap:    [ AppComponent ] //components required immediately upon launching
 })
 

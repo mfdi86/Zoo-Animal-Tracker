@@ -1,25 +1,28 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { AppComponent } from './app.component'; //might not need this?
 import { Animal } from './animal.model';
 
 @Component({
   selector: 'animal-list',
   template: `
-
-  <div class="animal-container">
-      <div class="each-animal">
-        <b><h2>{{currentAnimal.name}}</h2></b>
-        <img src={{currentAnimal.image}}><br>
-        <b>Species: </b>{{currentAnimal.species}}<br>
-        <b>Age: </b>{{currentAnimal.age}}<br>
-        <b>Diet: </b>{{currentAnimal.diet}}<br>
-        <b>Location: </b>{{currentAnimal.location}}<br>
-        <b>No. of Caretakers: </b>{{currentAnimal.caretakers}}<br>
-        <b>Likes: </b>{{currentAnimal.like}}<br>
-        <b>Dislikes: </b>{{currentAnimal.dislike}}<br>
-        <button (click)="editButtonHasBeenClicked(currentAnimal)">Edit!</button>
-      </div>
-  </div>
+  <h1>List of Current Animals:</h1>
+  <select (change)='onChange($event.target.value)'>
+    <option value="allAnimals" selected="selected">All Animals</option>
+    <option value="youngAnimals">Young Animals</option>
+    <option value="olderAnimals">Older Animals</option>
+  </select>
+  <ul>
+    <li *ngFor='let currentAnimal of childAnimalList | ageFilter:filterByAge'>
+      <h2>{{currentAnimal.name}}</h2>
+      <b>Species: </b>{{currentAnimal.species}}<br>
+      <b>Age: </b>{{currentAnimal.age}}<br>
+      <b>Diet: </b>{{currentAnimal.diet}}<br>
+      <b>Location: </b>{{currentAnimal.location}}<br>
+      <b>No. of Caretakers: </b>{{currentAnimal.caretakers}}<br>
+      <b>Likes: </b>{{currentAnimal.likes}}<br>
+      <b>Dislikes: </b>{{currentAnimal.dislikes}}<br>
+      <button (click)="editButtonHasBeenClicked(currentAnimal)">Edit!!!</button>
+    </li>
+  </ul>
   `
 })
 
@@ -27,19 +30,21 @@ export class AnimalListComponent {
   @Input() childAnimalList: Animal[];
   @Output() clickSender = new EventEmitter();
 
-  caretakers = null;
-
   editButtonHasBeenClicked(animalToEdit: Animal) {
      this.clickSender.emit(animalToEdit);
-   }
+  }
 
-  //set done property of animal to true or false
-  // toggleDone(clickedAnimal: Animal, setAge: boolean) {
-  //   clickedAnimal.done = setAge;
-  // }
+  filterByAge: string = 'allAnimals';
 
   isDone(clickedAnimal: Animal) {
    if(clickedAnimal.done === true) {
    }
   }
+
+  onChange(optionFromMenu) {
+    this.filterByAge = optionFromMenu;
+  }
+
+
+
 }
