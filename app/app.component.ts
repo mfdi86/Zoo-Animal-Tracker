@@ -7,9 +7,13 @@ import { Animal } from './animal.model';
 @Component({
   selector: 'app-root',
   template: `
+  <div class="hero">
+    <div class="hero-text">
+      <h1>ANIMAL TRACKS</h1>
+      <h3>{{appDescription}}</h3>
+    </div>
+  </div>
   <div class="container">
-    <h1>Zoo Animal Tracker</h1>
-    <h3>{{appDescription}}</h3>
     <animal-list [childAnimalList]="masterAnimalList" (clickSender)="editAnimal($event)"></animal-list>
     <hr>
     <div class="animal-forms">
@@ -30,7 +34,7 @@ export class AppComponent {
     new Animal('Gorilla', 'Susan', 2, 'Leaves', 'Forest One', 1, 'Female', 'Music', 'Sad faces'),
     new Animal('Tiger', 'Joe', 4, 'Mice', 'JungleOne', 1, 'Male', 'Running around', 'Loud noises')
   ];
-  
+
   selectedAnimal = null;
 
   finishedEditing() {

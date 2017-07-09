@@ -3,9 +3,34 @@ body {
   padding: 0;
   font-family: 'Schoolbell', cursive;
   color: #343434;
-  background-color: #C1DAD6;
+  background-color: #c9fdf6;
   box-sizing: border-box;
   hr {
     color: white;
   }
+}
+
+// HERO AND HEADER //
+.hero {
+  background-image: url('/resources/images/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+}
+
+.hero-text {
+  margin: auto;
+  text-align: center;
+  color: #fd3d40;
+    h1 {
+      padding-top: 350px;
+      margin: 0;
+      font-size: 5em;
+      font-family: 'Schoolbell', cursive;
+    }
+    h2 {
+      margin: 0;
+      font-size: 3.5em;
+    }
 }
